@@ -43,7 +43,7 @@
 ;; -- Event Handlers ----------------------------------------------------------
 
                                   ;; usage:  (dispatch [:initialise-db])
-(register-handler                 ;; On app startup, ceate initial state
+(register-handler                 ;; On app startup, create initial state
   :initialise-db                  ;; event id being handled
   check-schema-mw                 ;; afterwards: check that app-db matches the schema
   (fn [_ _]                       ;; the handler being registered
@@ -64,7 +64,7 @@
     new-filter-kw))               ;; return new state for the path
 
 
-                                   ;; usage:  (dispatch [:add-todo  "Finsih comments"])
+                                   ;; usage:  (dispatch [:add-todo  "Finish comments"])
 (register-handler                  ;; given the text, create a new todo
   :add-todo
   todo-middleware
